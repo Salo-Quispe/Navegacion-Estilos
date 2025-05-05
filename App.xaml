@@ -1,0 +1,40 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:squispeT3A"
+             x:Class="squispeT3A.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Entry -->
+            <Style  x:Key="EntryStyle"
+                    TargetType="Entry">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="Snow"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
+
+            <!-- Label -->
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="DarkCyan"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+
+            <!-- Button -->
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Teal"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+
+            <!-- DatePicker -->
+            <Style x:Key="DatePickerStyle" TargetType="DatePicker">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="HeightRequest" Value="40" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

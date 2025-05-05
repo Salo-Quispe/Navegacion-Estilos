@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="squispeT3A.Views.vContactos"
+             Title="vContactos">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+
+            <!-- Imagen decorativa -->
+            <Image Source="dotnet_bot.png" HeightRequest="120" HorizontalOptions="Center" />
+
+            <!-- Picker Identificación -->
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Tipo de Identificación" Style="{StaticResource LabelStyle}" />
+                <Picker x:Name="pickerTipoId"
+                        WidthRequest="120"
+                        Title="Tipo ID">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>CÉDULA</x:String>
+                            <x:String>RUC</x:String>
+                            <x:String>PASAPORTE</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Número de Identificación" Style="{StaticResource LabelStyle}" />
+                <Entry x:Name="txtIdentificacion"
+                       Placeholder="Ejemplo:1856985635"
+                       Style="{StaticResource EntryStyle}" />
+            </HorizontalStackLayout>
+
+            <Label Text="Nombres" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtNombres"
+                   Placeholder="Ejemplo:María Salomé"
+                   Keyboard="Text"
+                   Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Apellidos" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtApellidos"
+                   Placeholder="Ejemplo: Quispe Silva"
+                   Keyboard="Text"
+                   Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Fecha de Nacimiento"
+                   Style="{StaticResource LabelStyle}" />
+            <DatePicker x:Name="dateFecha"
+                        Style="{StaticResource DatePickerStyle}" />
+
+            <Label Text="Correo Electrónico"
+                   Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtCorreo"
+                   Placeholder="Ejemplo: usuario@dominio.com"
+                   Keyboard="Email" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Salario"
+                   Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtSalario"
+                   Placeholder="Ejemplo: 470,90 (usar unicamente coma (,) para separar dolares de centavos) "
+                   Keyboard="Numeric"
+                   Style="{StaticResource EntryStyle}" />
+
+            <Button Text="Guardar y Continuar"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource ButtonStyle}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
